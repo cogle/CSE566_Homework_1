@@ -1,0 +1,44 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15694 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15483 98.6555 hw1
+	      163  1.0386 libc-2.17.so
+	       45  0.2867 no-vmlinux
+	        3  0.0191 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15367    98.0038  hw1                      vm_multiply
+  15367    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+102       0.6505  hw1                      initialize
+  102      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+79        0.5038  libc-2.17.so             random_r
+  79       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+64        0.4082  libc-2.17.so             random
+  64       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+45        0.2870  no-vmlinux               /no-vmlinux
+  45       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+20        0.1276  libc-2.17.so             rand
+  20       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0064  ld-2.17.so               _dl_relocate_object
+  1        100.000  ld-2.17.so               _dl_relocate_object [self]
+-------------------------------------------------------------------------------
+1         0.0064  ld-2.17.so               bcmp
+  1        100.000  ld-2.17.so               bcmp [self]
+-------------------------------------------------------------------------------
+1         0.0064  ld-2.17.so               open_verify
+  1        100.000  ld-2.17.so               open_verify [self]
+-------------------------------------------------------------------------------

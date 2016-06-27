@@ -1,0 +1,41 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16647 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16446 98.7926 hw1
+	      158  0.9491 libc-2.17.so
+	       42  0.2523 no-vmlinux
+	        1  0.0060 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16326    98.1838  hw1                      vm_multiply
+  16326    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+100       0.6014  hw1                      initialize
+  100      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+72        0.4330  libc-2.17.so             random_r
+  72       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+69        0.4150  libc-2.17.so             random
+  69       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+42        0.2526  no-vmlinux               /no-vmlinux
+  42       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+17        0.1022  libc-2.17.so             rand
+  17       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0060  hw1                      main
+  1        100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+1         0.0060  ld-2.17.so               calloc
+  1        100.000  ld-2.17.so               calloc [self]
+-------------------------------------------------------------------------------

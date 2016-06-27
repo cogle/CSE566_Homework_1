@@ -1,0 +1,41 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15723 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15504 98.6071 hw1
+	      164  1.0431 libc-2.17.so
+	       53  0.3371 no-vmlinux
+	        2  0.0127 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15391    97.9694  hw1                      vm_multiply
+  15391    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+100       0.6365  hw1                      initialize
+  100      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+80        0.5092  libc-2.17.so             random_r
+  80       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+61        0.3883  libc-2.17.so             random
+  61       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+53        0.3374  no-vmlinux               /no-vmlinux
+  53       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+23        0.1464  libc-2.17.so             rand
+  23       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0064  ld-2.17.so               _dl_map_object_deps
+  1        100.000  ld-2.17.so               _dl_map_object_deps [self]
+-------------------------------------------------------------------------------
+1         0.0064  ld-2.17.so               memset
+  1        100.000  ld-2.17.so               memset [self]
+-------------------------------------------------------------------------------

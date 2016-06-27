@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+     9217 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     8986 97.4938 hw1
+	      180  1.9529 libc-2.17.so
+	       50  0.5425 no-vmlinux
+	        1  0.0108 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+8884     96.4813  hw1                      main
+  8884     100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+93        1.0100  hw1                      initialize
+  93       100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+79        0.8579  libc-2.17.so             random
+  79       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+70        0.7602  libc-2.17.so             random_r
+  70       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+50        0.5430  no-vmlinux               /no-vmlinux
+  50       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+31        0.3367  libc-2.17.so             rand
+  31       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0109  ld-2.17.so               index
+  1        100.000  ld-2.17.so               index [self]
+-------------------------------------------------------------------------------

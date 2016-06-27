@@ -1,0 +1,44 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15824 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15611 98.6539 hw1
+	      150  0.9479 libc-2.17.so
+	       60  0.3792 no-vmlinux
+	        3  0.0190 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15490    97.9326  hw1                      vm_multiply
+  15490    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+114       0.7207  hw1                      initialize
+  114      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+68        0.4299  libc-2.17.so             random_r
+  68       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+60        0.3793  no-vmlinux               /no-vmlinux
+  60       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+58        0.3667  libc-2.17.so             random
+  58       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+24        0.1517  libc-2.17.so             rand
+  24       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               _dl_new_object
+  1        100.000  ld-2.17.so               _dl_new_object [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               bcmp
+  1        100.000  ld-2.17.so               bcmp [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               do_lookup_x
+  1        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------

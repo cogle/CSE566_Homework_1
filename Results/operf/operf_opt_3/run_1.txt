@@ -1,0 +1,34 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15798 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15595 98.7150 hw1
+	      154  0.9748 libc-2.17.so
+	       49  0.3102 no-vmlinux
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15459    97.9037  hw1                      main
+  15459    100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+128       0.8106  hw1                      initialize
+  128      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+64        0.4053  libc-2.17.so             random_r
+  64       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+55        0.3483  libc-2.17.so             random
+  55       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+49        0.3103  no-vmlinux               /no-vmlinux
+  49       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+35        0.2217  libc-2.17.so             rand
+  35       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------

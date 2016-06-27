@@ -1,0 +1,37 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15923 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15709 98.6560 hw1
+	      163  1.0237 libc-2.17.so
+	       51  0.3203 no-vmlinux
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15596    97.9956  hw1                      vm_multiply
+  15596    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+105       0.6598  hw1                      initialize
+  105      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+76        0.4775  libc-2.17.so             random_r
+  76       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+61        0.3833  libc-2.17.so             random
+  61       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+51        0.3205  no-vmlinux               /no-vmlinux
+  51       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+25        0.1571  libc-2.17.so             rand
+  25       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0063  libc-2.17.so             init_cacheinfo
+  1        100.000  libc-2.17.so             init_cacheinfo [self]
+-------------------------------------------------------------------------------

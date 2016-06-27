@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15914 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15691 98.5987 hw1
+	      163  1.0243 libc-2.17.so
+	       58  0.3645 no-vmlinux
+	        2  0.0126 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15577    97.9501  hw1                      main
+  15577    100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+103       0.6477  hw1                      initialize
+  103      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+87        0.5471  libc-2.17.so             random_r
+  87       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+58        0.3647  libc-2.17.so             random
+  58       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+58        0.3647  no-vmlinux               /no-vmlinux
+  58       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+18        0.1132  libc-2.17.so             rand
+  18       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+2         0.0126  ld-2.17.so               do_lookup_x
+  2        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------

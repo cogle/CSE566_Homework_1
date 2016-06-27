@@ -1,0 +1,204 @@
+gprof
+   Must compile the, and generate a gmon.out file in order to analyze the
+   program.
+   Measures using a hybrid approach of compiler assisted instrumentation and
+   sampling.
+   Gets data by probing the counter at regular intervals by interrupting the
+   program.(This means that if a function is super fast it might not "count it",
+   in the end result)
+   Doesn't take into consideration memory usage(might be useful for low level
+   embedded systems type applications)
+
+Oprofile
+   Oprofile statistical sampling
+
+   Gprof uses a special system call to periodically sample the currently running
+   process only. This means YOU will not be able to see bottlenecks that occur
+   in shared libs or kernel. This can result in skewed results.
+
+   Oprofile sees everything(might require sudo)
+
+
+   Gprof compiling it with -pg adds things to the code.
+   Could cause changes that might interfere.
+   (LOOK INTO HOW THIS MIGHT AFFECT OPTIMIZAITON)
+
+   Oprofile does not need this. BUT Oprofile can not generate call graph.
+   Oprofile can do multithreaded code/Gprof can not.
+
+   Oprofile terrifying user interface
+
+Perf
+   Perf not much documentation
+   Perf does use sampling
+
+GPROF
+
+[DONE]
+   Of the three Performance Profilers analyzed in the assignment this profiler
+   seemed to be the most documented and widely used. As a result getting on of
+   the advantages of this profiler is that it is slightly easier to get started
+   with. This is a plus if you are simply trying to quickly profile something as
+   there is ample documentation and setup is not extremely arduous.
+
+[DONE]
+   While simple to use Gprof does have its limitations. One of the most glaring is
+   its inability to measure the performance of multi-threaded code. When created
+   multi-core systems were a luxury and thus optimizing over such machines was not
+   needed; however, in today's world where multi-core machines are the norm
+   multi-threaded code is no longer a rarity.
+
+[DONE]
+   Gprof measures the performance of applications by using a method called
+   sampling. When sampling the code the it only measures the time when the code
+   itself is running. Thus if the process is switched out by the CPU it does NOT
+   measure this time. While this might seem like a benefit it can actually hide
+   problem areas in our code. Our code might have a bottle neck in an external
+   library or maybe even in an IO operation. However this problem would never be
+   realized and while you might spend hours and hours improving your code you would
+   never realize the problem isn't the code but rather from an external device.
+   In addition because we are sampling the code there is the possibility that
+   our code runs so fast that during the sampling time a function never gets
+   registered as being called, and therefore we might have slightly skewed
+   results.
+
+[DONE]
+   The final issue with Gprof is that optimized code can reek havoc on the
+   profiling. When compiling with the -O3 flag the compiler will inline
+   functions. Thus from the view of the profiler functions have disappeared and
+   no longer will you be able to measure their performance.
+
+OPROFILE
+
+[DONE]
+   Like Gprof, Oprofile is a statistical sampling profiler. Oprofile doesn't
+   just sample only when your process is running, instead it continuously
+   samples even when your code has stopped running due to a context switch. This
+   solves one of the problems mention above. The source of a bottleneck might
+   not be from the code itself, instead it might be from an external library or
+   poor IO/cache performance. This continuous polling allows problems such as
+   these to be recognized and dealt with.
+
+[DONE]
+   One issue with Oprofile is that the user must run this command as root. While
+   this is not an issue for somebody using their personal machine. If they are
+   using a machine where they do not have such privileges then using this tool
+   may prove to be impossible. Since we are performing a continuous poll and are
+   root it is now possible to view all processes on the CPU, and thus we now
+   have the ability to monitor multi-threaded code. While this tool has the
+   caveat that it must be ran in sudo, it does make itself much more useful by
+   supporting the profiling of multi-threaded code.
+
+[DONE]
+   Unlike Gprof, Oprofile does NOT require recompiling each time you wish to
+   run a performance test. This means that if I wish to rerun a test I do not
+   need to recompile the source code in order to generate a new test. This is a
+   benefit in that source code can sometimes take a pretty long time to build.
+   In one instance I waited about 10minutes for the companies source code to
+   completely build. Having to do that every time one wants to measure
+   performance is a costly waste of time. Luckily Oprofile has no such
+   requirements and does not need to insert itself directly into the code.
+
+I found perf to be the hardest profiler to find documentation about.
+
+[DONE]
+   One of the immediate things that I noticed about this profiler is that there
+   is a lot less information on the web regarding this profiler compared to the
+   previous two. The Linux man pages contains a large document about
+   PERF_EVENT_OPEN(2) which is useful, but does require sometime to read and
+   understand as it aimed towards an advanced level programmer.
+
+[DONE]
+   Perf is similar to Oprofile in the sense that it can measure multi-threaded
+   code, does not need to be compiled with the code in order to run the test and
+   is a statistical sampling profiler.
+
+
+The results above for Gprof surprised me a bit. One of the first things that
+is apparent from this graph is that I was unable to collect data past Level 2
+Optimization. I am not 100 percent sure as to why this happened but my
+hypothesis is as follows -O3 optimization turns on -finline-functions. In order
+to test this idea I copied the original code changed the vm_multiply() function
+to be inline and reran the Gprof results.
+
+Sure enough having inlined our function has caused its calls to disappear.
+Therefor, I believe that Optimization Level 3's aggressive optimization tactics
+make it so that Gprof's timing hooks are no longer registered due to the
+-finline-functions optimization.
+
+An important thing to discuss is how data was collected for the following
+trials. Every command was ran from the command line no script was used to gather
+data. In addition in between each run a tab the Firefox browser was ran for a
+minute where I visited various sites, in order hopefully clear the cache so
+that each test would have a similar random starting state.
+
+The second topic that needs to be addressed is the apparent lack of decrease in
+time that the program takes to run despite increasing the optimization level.
+
+Using an interrupt polling system allowed us to collect far more data, than
+inserting timing hooks which is the method that Gprof relies on. One of the
+trends that is really hard to not notice is that up until performing Fast
+Optimization each function call generated about the same number of CPU events.
+I had expected to see a linear trend downward in the number of events because I
+figured that as the optimizer optimizes that it would get rid of extraneous
+code. After looking at what exactly each level of optimization does I think that
+while one might optimize the code it has to be in compliance with C strict
+standards. However, compiling with Fast Optimization disregards this the
+compliance mode and optimizes for pure speed.
+
+Similar to the results from the Operf we see that we never achieve a
+significant drop in running time until running our code in Fast Optimization
+mode. This profiler, like Operf, uses an interrupt polling system in order to
+obtain its results, and again we see that unlike the problems we had with Gprof
+we were able to collect data for every level of tested optimization.
+
+
+The above graphs highlight one of the problems with Gprof's manual insertion of
+timing hooks. The insertion of timing hooks is highly dependent on the manner in
+which the code is structured, altering this structure altering this structure
+renders Gprof clueless as to what is going on. Thus as we increased the
+optimization levels and more aggressive code restructuring occurred Gprof was
+unable to measure any events. On the contrary with the interrupt polling that
+Operf and Perf employ, we are able to monitor the function the entire time
+regardless of the Optimization level. However, as we increase the Optimization
+due to what I assume is the inlining of functions we lose granularity with
+respect to which functions are being called as functions become inlined.
+
+One of the more startling results to come out of the above graphs is that the
+Level of Optimization does not appear to decrease the amount of time or cycles
+that the program takes, unless we compile with the Fast option. This result is
+particularly surprising as I would have anticipated that there would have been
+a slight decrease, but on the contrary it appears going from no optimization at
+all to Level 3 Optimization actually seems to increase the time that it takes or
+remain about the same. I will admit that my sampling is rather low and that in
+order to make a much more definitive conclusion I would need to perform a much
+more extensive sampling of each profiler. As for why this occurs I can not
+really say. One reason that compiling with Optimization Level Fast is so much
+faster is that it disregards the strict compliance standards. This however does
+not explain why there is not a decreasing trend with respect to time/cycles over
+optimization level.
+
+
+Above is the data collected for Problem 5. In this problem I measured  the number
+of CPU events for a given optimization level 5 times. From the graph above it is
+clear that there is no definitive answer as to whether or not switching around
+the order of multiplication speeds up or slows down the code. The graph clearly
+shows the Default and Reversed lines crossing throughout the experiment with
+neither line remaining above or below the other line. In addition for every
+optimization level their exist regions of overlap when both of line's standard
+deviations are taken into consideration. This points to a an experiment that
+yielded similar values despite the order of multiplication.
+
+For this problem we are asked to look at the organization of the cache. One way
+in which we can do this is by analyzing the Perf outputs. Perf contains a large
+number of events that a user can track, amongst these trackable events are
+cache-related events. This allows us the ability to analyze how the cache is
+being used by our program. Somethings I noticed was that our program relies
+very heavily on the L1 cache. The number of loads and evictions from this
+particular cache far outnumber the other cache. One thing that this points to
+is its importance. Now one reason that the number of the cache loads might be
+so large is that typically the size of this cache is much smaller. This is due
+to cost associated with this cache. Thus I would anticipate a larger number of
+loads, as is seen. The other cache received less load request but it is likely
+that the amount of data stored in this particular level is far greater than that
+of the L1. 

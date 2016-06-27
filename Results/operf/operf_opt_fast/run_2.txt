@@ -1,0 +1,41 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+     8964 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     8749 97.6015 hw1
+	      175  1.9523 libc-2.17.so
+	       37  0.4128 no-vmlinux
+	        3  0.0335 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+8658     96.6618  hw1                      main
+  8658     100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+84        0.9378  hw1                      initialize
+  84       100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+81        0.9043  libc-2.17.so             random_r
+  81       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+78        0.8708  libc-2.17.so             random
+  78       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+37        0.4131  no-vmlinux               /no-vmlinux
+  37       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+16        0.1786  libc-2.17.so             rand
+  16       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+2         0.0223  ld-2.17.so               do_lookup_x
+  2        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------
+1         0.0112  ld-2.17.so               _dl_relocate_object
+  1        100.000  ld-2.17.so               _dl_relocate_object [self]
+-------------------------------------------------------------------------------

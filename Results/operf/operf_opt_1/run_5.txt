@@ -1,0 +1,37 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16456 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16247 98.7299 hw1
+	      167  1.0148 libc-2.17.so
+	       42  0.2552 no-vmlinux
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16132    98.1146  hw1                      vm_multiply
+  16132    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+100       0.6082  hw1                      initialize
+  100      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+84        0.5109  libc-2.17.so             random_r
+  84       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+66        0.4014  libc-2.17.so             random
+  66       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+42        0.2554  no-vmlinux               /no-vmlinux
+  42       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+17        0.1034  libc-2.17.so             rand
+  17       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0061  hw1                      main
+  1        100.000  hw1                      main [self]
+-------------------------------------------------------------------------------

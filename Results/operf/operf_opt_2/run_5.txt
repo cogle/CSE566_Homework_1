@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16235 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16052 98.8728 hw1
+	      146  0.8993 libc-2.17.so
+	       36  0.2217 no-vmlinux
+	        1  0.0062 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15925    98.1389  hw1                      vm_multiply
+  15925    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+119       0.7333  hw1                      initialize
+  119      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+64        0.3944  libc-2.17.so             random_r
+  64       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+61        0.3759  libc-2.17.so             random
+  61       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+36        0.2219  no-vmlinux               /no-vmlinux
+  36       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+21        0.1294  libc-2.17.so             rand
+  21       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0062  ld-2.17.so               strcmp
+  1        100.000  ld-2.17.so               strcmp [self]
+-------------------------------------------------------------------------------

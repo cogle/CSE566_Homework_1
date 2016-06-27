@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    17318 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    17096 98.7181 hw1
+	      174  1.0047 libc-2.17.so
+	       47  0.2714 no-vmlinux
+	        1  0.0058 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16982    98.1278  hw1                      main
+  16982    100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+102       0.5894  hw1                      initialize
+  102      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+78        0.4507  libc-2.17.so             random_r
+  78       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+73        0.4218  libc-2.17.so             random
+  73       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+47        0.2716  no-vmlinux               /no-vmlinux
+  47       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+23        0.1329  libc-2.17.so             rand
+  23       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0058  ld-2.17.so               _dl_relocate_object
+  1        100.000  ld-2.17.so               _dl_relocate_object [self]
+-------------------------------------------------------------------------------

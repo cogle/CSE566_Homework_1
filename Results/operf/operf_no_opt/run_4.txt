@@ -1,0 +1,44 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16197 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15989 98.7158 hw1
+	      169  1.0434 libc-2.17.so
+	       36  0.2223 no-vmlinux
+	        3  0.0185 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15880    98.0974  hw1                      vm_multiply
+  15880    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+100       0.6177  hw1                      initialize
+  100      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+74        0.4571  libc-2.17.so             random
+  74       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+73        0.4510  libc-2.17.so             random_r
+  73       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+36        0.2224  no-vmlinux               /no-vmlinux
+  36       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+22        0.1359  libc-2.17.so             rand
+  22       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0062  ld-2.17.so               __GI___fxstat
+  1        100.000  ld-2.17.so               __GI___fxstat [self]
+-------------------------------------------------------------------------------
+1         0.0062  ld-2.17.so               _dl_fixup
+  1        100.000  ld-2.17.so               _dl_fixup [self]
+-------------------------------------------------------------------------------
+1         0.0062  ld-2.17.so               _dl_relocate_object
+  1        100.000  ld-2.17.so               _dl_relocate_object [self]
+-------------------------------------------------------------------------------

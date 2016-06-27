@@ -1,0 +1,44 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16523 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16334 98.8561 hw1
+	      154  0.9320 libc-2.17.so
+	       34  0.2058 no-vmlinux
+	        1  0.0061 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16208    98.1470  hw1                      vm_multiply
+  16208    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+117       0.7085  hw1                      initialize
+  117      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+70        0.4239  libc-2.17.so             random_r
+  70       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+59        0.3573  libc-2.17.so             random
+  59       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+34        0.2059  no-vmlinux               /no-vmlinux
+  34       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+23        0.1393  libc-2.17.so             rand
+  23       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0061  ld-2.17.so               _dl_relocate_object
+  1        100.000  ld-2.17.so               _dl_relocate_object [self]
+-------------------------------------------------------------------------------
+1         0.0061  libc-2.17.so             init_cacheinfo
+  1        100.000  libc-2.17.so             init_cacheinfo [self]
+-------------------------------------------------------------------------------
+1         0.0061  libc-2.17.so             strcasecmp
+  1        100.000  libc-2.17.so             strcasecmp [self]
+-------------------------------------------------------------------------------

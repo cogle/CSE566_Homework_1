@@ -1,0 +1,41 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15898 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15690 98.6917 hw1
+	      157  0.9875 libc-2.17.so
+	       49  0.3082 no-vmlinux
+	        2  0.0126 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15559    97.9108  hw1                      main
+  15559    100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+124       0.7803  hw1                      initialize
+  124      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+69        0.4342  libc-2.17.so             random
+  69       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+63        0.3965  libc-2.17.so             random_r
+  63       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+49        0.3084  no-vmlinux               /no-vmlinux
+  49       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+25        0.1573  libc-2.17.so             rand
+  25       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               do_lookup_x
+  1        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               intel_check_word
+  1        100.000  ld-2.17.so               intel_check_word [self]
+-------------------------------------------------------------------------------

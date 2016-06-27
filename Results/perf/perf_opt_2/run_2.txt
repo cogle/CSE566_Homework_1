@@ -1,0 +1,22 @@
+# started on Sun Jun 26 17:13:06 2016
+
+
+ Performance counter stats for './hw1':
+
+       1201.805767      task-clock (msec)         #    0.999 CPUs utilized          
+                 1      context-switches          #    0.001 K/sec                  
+                 8      cpu-migrations            #    0.007 K/sec                  
+               635      page-faults               #    0.528 K/sec                  
+     3,148,652,304      cycles                    #    2.620 GHz                      (62.44%)
+   <not supported>      stalled-cycles-frontend  
+   <not supported>      stalled-cycles-backend   
+     6,369,286,328      instructions              #    2.02  insns per cycle          (74.93%)
+     1,068,000,292      branches                  #  888.663 M/sec                    (75.01%)
+         1,081,235      branch-misses             #    0.10% of all branches          (87.51%)
+     2,117,959,876      L1-dcache-loads           # 1762.315 M/sec                    (87.51%)
+       131,896,047      L1-dcache-load-misses     #    6.23% of all L1-dcache hits    (62.51%)
+         9,524,611      LLC-loads                 #    7.925 M/sec                    (50.04%)
+            14,846      LLC-load-misses           #    0.16% of all LL-cache hits     (49.99%)
+
+       1.202492659 seconds time elapsed
+

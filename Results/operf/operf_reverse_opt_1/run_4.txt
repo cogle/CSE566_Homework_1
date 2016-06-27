@@ -1,0 +1,47 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16690 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16488 98.7897 hw1
+	      162  0.9706 libc-2.17.so
+	       36  0.2157 no-vmlinux
+	        4  0.0240 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16370    98.1297  hw1                      vm_multiply
+  16370    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+110       0.6594  hw1                      initialize
+  110      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+72        0.4316  libc-2.17.so             random
+  72       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+72        0.4316  libc-2.17.so             random_r
+  72       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+36        0.2158  no-vmlinux               /no-vmlinux
+  36       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+18        0.1079  libc-2.17.so             rand
+  18       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0060  ld-2.17.so               _dl_check_map_versions
+  1        100.000  ld-2.17.so               _dl_check_map_versions [self]
+-------------------------------------------------------------------------------
+1         0.0060  ld-2.17.so               dl_main
+  1        100.000  ld-2.17.so               dl_main [self]
+-------------------------------------------------------------------------------
+1         0.0060  ld-2.17.so               do_lookup_x
+  1        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------
+1         0.0060  ld-2.17.so               strcmp
+  1        100.000  ld-2.17.so               strcmp [self]
+-------------------------------------------------------------------------------

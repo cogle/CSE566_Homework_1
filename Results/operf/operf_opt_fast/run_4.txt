@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+     9185 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     8962 97.5721 hw1
+	      178  1.9379 libc-2.17.so
+	       44  0.4790 no-vmlinux
+	        1  0.0109 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+8859     96.5559  hw1                      main
+  8859     100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+93        1.0136  hw1                      initialize
+  93       100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+76        0.8283  libc-2.17.so             random
+  76       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+76        0.8283  libc-2.17.so             random_r
+  76       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+44        0.4796  no-vmlinux               /no-vmlinux
+  44       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+26        0.2834  libc-2.17.so             rand
+  26       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0109  ld-2.17.so               bcmp
+  1        100.000  ld-2.17.so               bcmp [self]
+-------------------------------------------------------------------------------

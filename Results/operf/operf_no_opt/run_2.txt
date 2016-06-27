@@ -1,0 +1,47 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15794 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15572 98.5944 hw1
+	      162  1.0257 libc-2.17.so
+	       56  0.3546 no-vmlinux
+	        4  0.0253 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15463    97.9539  hw1                      vm_multiply
+  15463    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+101       0.6398  hw1                      initialize
+  101      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+71        0.4498  libc-2.17.so             random_r
+  71       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+66        0.4181  libc-2.17.so             random
+  66       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+56        0.3547  no-vmlinux               /no-vmlinux
+  56       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+25        0.1584  libc-2.17.so             rand
+  25       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               _dl_name_match_p
+  1        100.000  ld-2.17.so               _dl_name_match_p [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               check_match.9346
+  1        100.000  ld-2.17.so               check_match.9346 [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               do_lookup_x
+  1        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               memset
+  1        100.000  ld-2.17.so               memset [self]
+-------------------------------------------------------------------------------

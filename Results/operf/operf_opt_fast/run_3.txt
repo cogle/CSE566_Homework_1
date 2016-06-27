@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+     8785 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	     8605 97.9511 hw1
+	      141  1.6050 libc-2.17.so
+	       38  0.4326 no-vmlinux
+	        1  0.0114 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+8533     97.2200  hw1                      main
+  8533     100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+67        0.7634  libc-2.17.so             random_r
+  67       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+64        0.7292  hw1                      initialize
+  64       100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+59        0.6722  libc-2.17.so             random
+  59       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+38        0.4329  no-vmlinux               /no-vmlinux
+  38       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+15        0.1709  libc-2.17.so             rand
+  15       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0114  ld-2.17.so               _dl_map_object_deps
+  1        100.000  ld-2.17.so               _dl_map_object_deps [self]
+-------------------------------------------------------------------------------

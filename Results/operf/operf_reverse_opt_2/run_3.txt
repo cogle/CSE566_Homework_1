@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    15831 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15641 98.7998 hw1
+	      140  0.8843 libc-2.17.so
+	       49  0.3095 no-vmlinux
+	        1  0.0063 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15507    98.0339  hw1                      vm_multiply
+  15507    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+121       0.7650  hw1                      initialize
+  121      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+69        0.4362  libc-2.17.so             random_r
+  69       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+50        0.3161  libc-2.17.so             random
+  50       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+49        0.3098  no-vmlinux               /no-vmlinux
+  49       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+21        0.1328  libc-2.17.so             rand
+  21       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0063  ld-2.17.so               _dl_catch_error
+  1        100.000  ld-2.17.so               _dl_catch_error [self]
+-------------------------------------------------------------------------------

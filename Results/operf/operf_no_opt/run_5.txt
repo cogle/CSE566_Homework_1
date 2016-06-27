@@ -1,0 +1,38 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16335 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16139 98.8001 hw1
+	      155  0.9489 libc-2.17.so
+	       40  0.2449 no-vmlinux
+	        1  0.0061 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16024    98.1382  hw1                      vm_multiply
+  16024    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+108       0.6614  hw1                      initialize
+  108      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+66        0.4042  libc-2.17.so             random
+  66       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+64        0.3920  libc-2.17.so             random_r
+  64       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+40        0.2450  no-vmlinux               /no-vmlinux
+  40       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+25        0.1531  libc-2.17.so             rand
+  25       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0061  ld-2.17.so               do_lookup_x
+  1        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------

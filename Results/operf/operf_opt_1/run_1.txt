@@ -1,0 +1,44 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16120 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    15909 98.6911 hw1
+	      167  1.0360 libc-2.17.so
+	       42  0.2605 no-vmlinux
+	        2  0.0124 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+15804    98.0945  hw1                      vm_multiply
+  15804    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+95        0.5897  hw1                      initialize
+  95       100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+85        0.5276  libc-2.17.so             random_r
+  85       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+62        0.3848  libc-2.17.so             random
+  62       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+42        0.2607  no-vmlinux               /no-vmlinux
+  42       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+20        0.1241  libc-2.17.so             rand
+  20       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0062  hw1                      main
+  1        100.000  hw1                      main [self]
+-------------------------------------------------------------------------------
+1         0.0062  ld-2.17.so               _dl_relocate_object
+  1        100.000  ld-2.17.so               _dl_relocate_object [self]
+-------------------------------------------------------------------------------
+1         0.0062  ld-2.17.so               strcmp
+  1        100.000  ld-2.17.so               strcmp [self]
+-------------------------------------------------------------------------------

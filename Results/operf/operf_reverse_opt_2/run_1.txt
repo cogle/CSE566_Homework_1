@@ -1,0 +1,41 @@
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+CPU_CLK_UNHALT...|
+  samples|      %|
+------------------
+    16413 100.000 hw1
+	CPU_CLK_UNHALT...|
+	  samples|      %|
+	------------------
+	    16216 98.7997 hw1
+	      154  0.9383 libc-2.17.so
+	       41  0.2498 no-vmlinux
+	        2  0.0122 ld-2.17.so
+CPU: Intel Haswell microarchitecture, speed 3.2e+06 MHz (estimated)
+Counted CPU_CLK_UNHALTED events (Clock cycles when not halted) with a unit mask of 0x00 (No unit mask) count 100000
+samples  %        image name               symbol name
+-------------------------------------------------------------------------------
+16082    98.0789  hw1                      vm_multiply
+  16082    100.000  hw1                      vm_multiply [self]
+-------------------------------------------------------------------------------
+118       0.7196  hw1                      initialize
+  118      100.000  hw1                      initialize [self]
+-------------------------------------------------------------------------------
+68        0.4147  libc-2.17.so             random
+  68       100.000  libc-2.17.so             random [self]
+-------------------------------------------------------------------------------
+58        0.3537  libc-2.17.so             random_r
+  58       100.000  libc-2.17.so             random_r [self]
+-------------------------------------------------------------------------------
+41        0.2500  no-vmlinux               /no-vmlinux
+  41       100.000  no-vmlinux               /no-vmlinux [self]
+-------------------------------------------------------------------------------
+28        0.1708  libc-2.17.so             rand
+  28       100.000  libc-2.17.so             rand [self]
+-------------------------------------------------------------------------------
+1         0.0061  ld-2.17.so               _dl_map_object_from_fd
+  1        100.000  ld-2.17.so               _dl_map_object_from_fd [self]
+-------------------------------------------------------------------------------
+1         0.0061  ld-2.17.so               do_lookup_x
+  1        100.000  ld-2.17.so               do_lookup_x [self]
+-------------------------------------------------------------------------------
