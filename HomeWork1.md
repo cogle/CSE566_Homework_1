@@ -255,7 +255,7 @@ py.iplot(figure, filename='operf_graph')
        style="display: block; text-align: center;">
     <img src="https://plot.ly/~cogle/12.png" 
        alt="Perf: Time to run vs Optimization" 
-       style="max-width: 100%;width: 600px;"  width="600" 
+       style="max-height:1000",
        onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="cogle:12"  src="https://plot.ly/embed.js" async></script>
 </div>
@@ -328,7 +328,7 @@ py.iplot(figure, filename='perf_graph')
     <a href="https://plot.ly/~cogle/18/" target="_blank" 
        title="Perf: Time to run vs Optimization" style="display: block; text-align: center;">
         <img src="https://plot.ly/~cogle/18.png" alt="Perf: Time to run vs Optimization" 
-             style="max-width: 100%;width: 600px;"  width="600" 
+             style="max-height: 1000" 
              onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="cogle:18"  src="https://plot.ly/embed.js" async></script>
 </div>
@@ -464,11 +464,18 @@ py.iplot(figure, filename='reverse-comparision')
 ```
 
 <div>
-    <a href="https://plot.ly/~cogle/14/" target="_blank" title="Operf: Number of CPU Events vs Optimization Level" style="display: block; text-align: center;"><img src="https://plot.ly/~cogle/14.png" alt="Operf: Number of CPU Events vs Optimization Level" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <a href="https://plot.ly/~cogle/14/" target="_blank" title="Operf: Number of CPU Events vs Optimization Level"    
+       style="display: block; text-align: center;"><img src="https://plot.ly/~cogle/14.png" 
+       alt="Operf: Number of CPU Events vs Optimization Level" style="max-height:1000"
+       onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="cogle:14"  src="https://plot.ly/embed.js" async></script>
 </div>
 <div>
-<a href="https://plot.ly/~cogle/16/" target="_blank" title="" style="display: block; text-align: center;"><img src="https://plot.ly/~cogle/16.png" alt="" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+<a href="https://plot.ly/~cogle/16/" target="_blank" title="" 
+   style="display: block; text-align: center;">
+<img src="https://plot.ly/~cogle/16.png" alt="" 
+     style="max-height: 100%;width: 600px;"  width="600"      
+     onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="cogle:16"  src="https://plot.ly/embed.js" async></script>
 </div>
 
