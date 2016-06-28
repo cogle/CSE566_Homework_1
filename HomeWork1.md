@@ -166,7 +166,16 @@ figure=go.Figure(data=data,layout=layout)
 py.iplot(figure, filename='gprof_graph')
 ```
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~cogle/10.embed"></iframe>
+<div style="max-width:100%;">
+    <a href="https://plot.ly/~cogle/10/" target="_blank"
+       title="Gprof: Time to run vs Optimization" 
+       style="display: block; text-align: center;">
+    <img src="https://plot.ly/~cogle/10.png" 
+         alt="Gprof: Time to run vs Optimization" 
+         style="max-height:750",
+         onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="cogle:10"  src="https://plot.ly/embed.js" async></script>
+</div>
 
 <center><h3>Gprof Data Analysis</h3></center>
 
