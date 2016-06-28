@@ -166,18 +166,7 @@ figure=go.Figure(data=data,layout=layout)
 py.iplot(figure, filename='gprof_graph')
 ```
 
-
-
-
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cogle/10.embed" height="750px" width="100%"></iframe>
-
-
-
-<div>
-    <a href="https://plot.ly/~cogle/10/" target="_blank" title="Gprof: Time to run vs Optimization" style="display: block; text-align: center;"><img src="https://plot.ly/~cogle/10.png" alt="Gprof: Time to run vs Optimization" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="cogle:10"  src="https://plot.ly/embed.js" async></script>
-</div>
-
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~cogle/10.embed"></iframe>
 
 <center><h3>Gprof Data Analysis</h3></center>
 
@@ -251,18 +240,14 @@ figure=go.Figure(data=data,layout=layout)
 py.iplot(figure, filename='operf_graph')
 ```
 
-
-
-
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cogle/12.embed" height="1000px" width="100%"></iframe>
-
-
-
 <div>
-    <a href="https://plot.ly/~cogle/12/" target="_blank" title="Perf: Time to run vs Optimization" 
-    style="display: block; text-align: center;"><img src="https://plot.ly/~cogle/12.png" 
-    alt="Perf: Time to run vs Optimization" style="max-width: 100%;width: 600px;"  width="600" 
-    onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <a href="https://plot.ly/~cogle/12/" target="_blank" 
+       title="Perf: Time to run vs Optimization" 
+       style="display: block; text-align: center;">
+    <img src="https://plot.ly/~cogle/12.png" 
+       alt="Perf: Time to run vs Optimization" 
+       style="max-width: 100%;width: 600px;"  width="600" 
+       onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="cogle:12"  src="https://plot.ly/embed.js" async></script>
 </div>
 
@@ -329,13 +314,6 @@ layout=go.Layout(height=750,
 figure=go.Figure(data=data,layout=layout)
 py.iplot(figure, filename='perf_graph')
 ```
-
-
-
-
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cogle/18.embed" height="750px" width="100%"></iframe>
-
-
 
 <div>
     <a href="https://plot.ly/~cogle/18/" target="_blank" 
@@ -476,13 +454,6 @@ figure=go.Figure(data=data,layout=layout)
 py.iplot(figure, filename='reverse-comparision')
 ```
 
-
-
-
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cogle/14.embed" height="1000px" width="100%"></iframe>
-
-
-
 <div>
     <a href="https://plot.ly/~cogle/14/" target="_blank" title="Operf: Number of CPU Events vs Optimization Level" style="display: block; text-align: center;"><img src="https://plot.ly/~cogle/14.png" alt="Operf: Number of CPU Events vs Optimization Level" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="cogle:14"  src="https://plot.ly/embed.js" async></script>
@@ -530,13 +501,6 @@ data_matrix = [['Run + Optimization Level', 'Average', 'Standard Deviation'],
 table = FF.create_table(data_matrix)
 py.iplot(table, filename='results_table')
 ```
-
-
-
-
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cogle/16.embed" height="380px" width="100%"></iframe>
-
-
 
 <center><h3>Data Analysis and Conclusion</h3></center>
 <p>
